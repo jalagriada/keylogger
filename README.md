@@ -1,48 +1,139 @@
-# 🛡️ Advanced Keylogger Toolkit (Educational Use Only)
+# 🛡️ Advanced Keylogger Toolkit (For Educational Use Only)
 
-A complete Python-based keylogger detection, logging, and decoding toolkit. This project was developed for **educational and ethical testing purposes only**. It includes:
+A Python-based keylogger detection, execution, and decoding toolkit designed **for educational and ethical purposes only**. This project includes:
 
-- A keylogger (`keylogger_pynput.py`) that logs keystrokes without requiring root access.
-- A powerful terminator (`advanced_terminator.py`) that detects and stops running keylogger scripts.
-- A decoder (`decoder.py`) that converts raw keystroke logs into readable text, handling `[backspace]`, `[enter]`, etc.
-
----
-
-## 📌 Project Details
-
-- **Course:** Bachelor of Science in Information Technology  
-- **Section:** BSIT 3H  
-- **School:** Camarines Sur Polytechnic Colleges  
-- **Location:** Nabua, Camarines Sur  
-- **Purpose:** Educational / Ethical Hacking Demo / Python Scripting Practice
+- ✅ `keylogger.py` — Logs all keystrokes (non-root)
+- ✅ `detector.py` — Detects and terminates keylogger processes
+- ✅ `decoder.py` — Decodes `keystrokes.log` to readable text
 
 ---
 
-## ⚙️ Features
+## 📚 Guide to Execute
 
-✅ Keylogger without root access  
-✅ Real-time detection and termination of suspicious `key.py` processes  
-✅ System info gathering of detected processes  
-✅ Auto mode and manual control for process termination  
-✅ Decoder script to read log files as human-readable text  
-✅ Virtual environment check for safety  
-
----
-
-## 🧰 Tools Used
-
-- Python 3  
-- `psutil`  
-- `pynput`  
-- `platform`, `socket`, `subprocess` (standard libraries)  
-
----
-
-## 🚀 Setup Instructions
-
-### 1. 🔐 Set up a virtual environment (for keylogger safety)
+### 1. Create a Virtual Environment *(optional but recommended)*
 
 ```bash
 python3 -m venv keylogger_venv
+```
+
+> ⚠️ If you see this error:
+
+```
+source: no such file or directory: keylogger_venv/bin/activate
+```
+
+> Just run the command above to create the virtual environment first.
+
+---
+
+### 2. Activate the Virtual Environment
+
+```bash
 source keylogger_venv/bin/activate
-pip install pynput
+```
+
+You should now see something like this in your terminal:
+
+```
+(keylogger_venv) ─(finn㉿kali)-[~/Desktop/keylogger]
+```
+
+> ✅ **Make sure you are inside the virtual environment**. Otherwise, the program might not run properly.
+
+---
+
+### 3. Install Required Python Libraries
+
+```bash
+pip install -r requirements.txt
+```
+
+✅ Example of successful installation:
+
+```
+Successfully installed psutil notify2 pynput evdev python-xlib six
+```
+
+---
+
+### 4. Run the Programs
+
+#### 🔎 Start the Detector
+
+```bash
+python detector.py
+```
+
+#### 📝 Start the Keylogger
+
+```bash
+python keylogger.py
+```
+
+#### 🔓 Decode the Logs (Optional)
+
+```bash
+python decoder.py
+```
+
+This will read `keystrokes.log` and print the decoded keystrokes in a clean, human-readable format.
+
+---
+
+## 📁 Example File Structure
+
+After running `ls`, you should see something like this:
+
+```
+decoder.py
+det.py
+detector.py
+keylogger.py
+key.py
+keylogger_venv/
+requirements.txt
+'guide to execute.txt'
+keystrokes.log
+```
+
+---
+
+## 🧾 `requirements.txt` Contents
+
+Here are the Python libraries required:
+
+```
+psutil>=5.9.0
+notify2>=0.3.1
+pynput>=1.7.6
+```
+
+You can also install them manually with:
+
+```bash
+pip install psutil notify2 pynput
+```
+
+---
+
+## ⚠️ Disclaimer
+
+> **THIS TOOL IS FOR EDUCATIONAL PURPOSES ONLY.**  
+> Any illegal activities or misuse of this program are strictly prohibited.  
+> Users are solely responsible for ensuring compliance with all local laws and regulations.  
+> The creators or contributors of this tool **disclaim all liability** for any damage, loss, or legal issues resulting from the misuse of this software.  
+> **Use responsibly and ethically.**
+
+---
+
+## 👨‍💻 Developed By
+
+- 🎓 BSIT 3H Students  
+- 🏫 Camarines Sur Polytechnic Colleges  
+- 📍 Nabua, Camarines Sur
+
+---
+
+## ✅ Done and Enjoy Learning!
+
+If you encounter any issues, recheck your virtual environment and dependencies. Always code ethically and responsibly. Happy coding! 💻🧠
